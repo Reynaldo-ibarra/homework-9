@@ -3,10 +3,11 @@ import mongoose from 'mongoose';
 import bodyParse from 'body-parser';
 import dotenv from 'dotenv';
 import route from './routes/employeeRoute.js';
-
+import cors from 'cors';
 
 const app = express()
 app.use(bodyParse.json())
+app.use(cors())
 
 dotenv.config()
 
