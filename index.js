@@ -5,13 +5,14 @@ import dotenv from 'dotenv';
 import route from './routes/employeeRoute.js';
 import cors from 'cors';
 
+
 const app = express()
 app.use(bodyParse.json())
 app.use(cors())
 
 dotenv.config()
 
-const PORT = process.env.port || 5000
+const PORT = process.env.port || 5001
 const MONGOURL = process.env.MONGO_URL
 
 mongoose.connect(MONGOURL).then(() => {
